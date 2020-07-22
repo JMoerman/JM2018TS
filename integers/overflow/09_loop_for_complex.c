@@ -3,7 +3,7 @@
 #include "integer_overflow.h"
 
 void integer_overflow_for_complex(int x) {
-    int val = INT_MAX - 20;
+    int val = INT_MAX / 2 - 20;
     int i = 0;
 
 #ifdef CATCH_BAD_PARAM
