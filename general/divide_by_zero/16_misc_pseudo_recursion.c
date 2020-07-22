@@ -24,6 +24,7 @@ int divide_zero_pseudo_rec1(int x, int y, int i, int div1, int div2) {
 }
 
 int divide_zero_pseudo_rec2(int x, int y, int i, int div1, int div2) {
+    int divisor;
     if(i <= 0) {
         return 10 / div1 + divide_zero_pseudo_rec1(x, y, 1, div1, div2);
     }

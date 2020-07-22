@@ -49,7 +49,7 @@ int main() {
     int* data = malloc(sizeof(int));
     bool is_freed = false;
     if(!data) {
-        return;
+        return 0;
     }
 #ifdef NO_BUG
     printf("%i\n", double_free_rec_multi_alt(9, 20, &data, &is_freed));

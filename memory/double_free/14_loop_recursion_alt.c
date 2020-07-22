@@ -41,7 +41,7 @@ int main() {
     int* data = malloc(sizeof(int));
     bool is_freed = false;
     if(!data) {
-        return;
+        return 0;
     }
 
 #ifdef NO_BUG

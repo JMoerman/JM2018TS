@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main() {
 #ifdef NO_BUG
@@ -8,7 +9,7 @@ int main() {
     char test_string[13];
 #endif
 
-    strcpy(to_print, "this is a long string");
+    strcpy(test_string, "this is a long string");
 
     printf("%s\n", test_string);
 
