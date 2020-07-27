@@ -27,13 +27,6 @@ void double_free_while_continue(int x) {
             i++;
             continue;
         }
-        if(i == 10) {
-            data = malloc(5*sizeof(int));
-            if(!data) {
-                return;
-            }
-            is_freed = false;
-        }
         if(i > x && is_freed) { /* should be !is_freed */
             free(data); /* DANGER: x < 10 */
             data = malloc(5*sizeof(int));
@@ -43,6 +36,13 @@ void double_free_while_continue(int x) {
             is_freed = false;
         } else {
             n_freed--;
+        }
+        if(i == 10) {
+            data = malloc(5*sizeof(int));
+            if(!data) {
+                return;
+            }
+            is_freed = false;
         }
         i++;
     }

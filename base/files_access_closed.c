@@ -7,7 +7,7 @@ int main() {
     file = fopen("file.txt","r");
 
     if(!file) {
-        return;
+        return 0;
     }
 
 #ifdef NO_BUG

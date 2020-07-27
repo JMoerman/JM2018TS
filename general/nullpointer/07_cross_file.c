@@ -17,9 +17,9 @@ void nullpointer_cross_file(bool a, bool b) {
     ptr = (int*)choose_pointer((void*)(arr+1), 0, a);
 
     if(b) {
-        val = arr[2];
+        val = arr[1];
     } else {
-        val = ptr[2]; /* DANGER, if !a & !b */
+        val = ptr[1]; /* DANGER, if !a & !b */
     }
 
     printf("%i\n", val);

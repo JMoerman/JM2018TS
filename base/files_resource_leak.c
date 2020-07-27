@@ -7,7 +7,7 @@ int main() {
     file = fopen("file.txt","r");
 
     if(!file) {
-        return;
+        return 1;
     }
 
     printf("%i\n", (int) fgetc(file));

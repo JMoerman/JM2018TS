@@ -21,7 +21,7 @@ GOTO_LABEL:
         printf("%i\n", val);
     }
 
-    val = val * 2;
+    val = val * 2u;
 
     if(i == 0) {
         i++;

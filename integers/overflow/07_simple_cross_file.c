@@ -13,7 +13,12 @@ void integer_overflow_cross_file(bool a, bool b) {
     }
 #endif
 
-    val = choose_int(2, INT_MAX / 3 - 1, INT_MAX / 2 - 1);
+    if (!a && !b) {
+        val = choose_int(2, INT_MAX / 2 - 1, 0);
+    }
+    else
+        val = choose_int(2, INT_MAX / 3 - 1, INT_MAX / 2 - 1);
+
 
     if(b) {
         val = val * 2;
