@@ -2,7 +2,6 @@
 #include "divide_by_zero.h"
 
 int divide_zero_pseudo_rec1(int x, int y, int i, int div1, int div2) {
-    int divisor;
 #ifdef CATCH_BAD_PARAM
     if(!div2 && x >= y && x < 10) {
         return 0;
